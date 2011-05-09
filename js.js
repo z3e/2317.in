@@ -26,9 +26,9 @@ function zeit() {
   document.getElementById(second+'s').style.color = 'red';
 }
 
-function filltext() {
+function fillText() {
   var viewportwidth, viewportheight;
-   
+  
   if (typeof window.innerWidth != 'undefined') {
   //  viewportwidth = window.innerWidth;
     viewportheight = window.innerHeight;
@@ -45,20 +45,32 @@ function filltext() {
   }
 
   var container, containerHeight;
-  i=43;
+  i=220;
   do {
       i--;
-    document.getElementById("textcontainer").style.fontSize = i+"px";
-    container = document.getElementById("jtextfill");
-    containerHeight = container.offsetHeight;
+    container = document.getElementById("uhr");
+    container.style.fontSize = i+"px";
+    containerheight = container.offsetHeight;
     //containerWidth = container.offsetWidth;
-  } while (viewportheight < containerHeight);
+  } while (viewportheight < containerheight);
+  //alert(i);
 }
 
 function OnResizeDocument () {
-  filltext();
+  fillText();
+}
+
+function highlight(id) {
+ var e = document.getElementById(id);
+ e.style.backgroundColor = (e.style.backgroundColor=="rgb(212, 212, 212)")?'':'#D4D4D4';
+}
+
+function toggle_visibility(id) {
+ var e = document.getElementById(id);
+  e.style.display = (e.style.display==''||e.style.display=='block')?'none':'block';
+  setTimeout("fillText()", 1000);;
 }
 
 setInterval("zeit()", 1000);
-filltext();
+fillText();
 window.onresize = OnResizeDocument;

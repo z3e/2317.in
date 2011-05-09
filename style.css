@@ -2,6 +2,7 @@
 
 html, body, div, form, fieldset, legend, label
 {
+  padding: 0;
 	margin: 0;
 	padding: 0;	
 }
@@ -25,3 +26,53 @@ th, td
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
 
 img { border: 0; }
+
+.options{
+	position:absolute;
+	top:-134px;
+	right:50px;
+	display: block;
+	background-color: #ccc;
+	padding: 0 0 10 0;
+	width:125px;
+	height:130px;
+	border:0 0 0 4px solid #333;
+	-moz-border-radius:0 0 10px 10px;
+	-webkit-border-radius:0 0 10px 10px;
+	 border-radius:0 0 10px 10px;
+	 -moz-box-shadow:0 0 5px #888888;
+	 -webkit-box-shadow:0 0 5px #888888;
+	 box-shadow:0 0 5px #888888;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  margin:0px;
+
+	 }
+
+  .options:hover {
+  top: 0;
+  }
+
+	.options:after {
+	display: block;
+	position:absolute;
+	right: 40px;
+	bottom:-38px;
+	content:" ";
+	border-color: #ccc transparent transparent transparent;
+	border-style:solid;
+	border-width:20px;
+	}
+	
+	.options:before {
+	display: block;
+	position:absolute;
+	right: 40px;
+	bottom:-44px;
+	content:" ";
+	border-color: #333 transparent transparent transparent;
+	border-style:solid;
+	border-width:20px;
+	}

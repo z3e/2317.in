@@ -1,223 +1,58 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!--
+
+Hi there,
+the other night I had this idea....
+my first thought was, just text and a little colour?! I am able to do that..
+turns out it's not THAT easy for someone without any experience. But i got
+it working somehow. YEAY!
+
+If you like what you see - or are looking at the code and think of much
+nicer ways to get the clock ticking... please let me know
+
+http://github.com/z3e/2317
+
+~pk
+
+-->
 <html>
   <head>
     <title>2317</title>
     <meta charset="utf-8" />
-    <meta name="description" content="2317 a text clock">    
-    <link rel='stylesheet' type='text/css' href='style.css'/> 
+    <meta name="description" content="2317 a text clock" />
+    <link rel='stylesheet' type='text/css' href='style.css'/>
   </head>
   <body>
-    <div class="jtextfill" id="jtextfill">
-      <span id="textcontainer">
-        <span id="wochentage">
-          <span id="d1">montag</span>
-          <span id="d2">dienstag</span>
-          <span id="d3">mittwoch</span>
-          <span id="d4">donnerstag</span>
-          <span id="d5">freitag</span>
-          <span id="d6">samstag</span>
-          <span id="d0">sonntag</span>
-        </span>
-        <span id="tag">
-          <span id="t1">eins</span>
-          <span id="t2">zwei</span>
-          <span id="t3">drei</span>
-          <span id="t4">vier</span>
-          <span id="t5">fünf</span>
-          <span id="t6">sechs</span>
-          <span id="t7">sieben</span>
-          <span id="t8">acht</span>
-          <span id="t9">neun</span>
-          <span id="t10">zehn</span>
-          <span id="t11">elf</span>
-          <span id="t12">zwölf</span>
-          <span id="t13">dreizehn</span>
-          <span id="t14">vierzehn</span>
-          <span id="t15">fünfzehn</span>
-          <span id="t16">sechzehn</span>
-          <span id="t17">siebzehn</span>
-          <span id="t18">achtzehn</span>
-          <span id="t19">neunzehn</span>
-          <span id="t20">zwanzig</span>
-          <span id="t21">einundzwanzig</span>
-          <span id="t22">zweiundzwanzig</span>
-          <span id="t23">dreiundzwanzig</span>
-          <span id="t24">vierundzwanzig</span>
-          <span id="t25">fünfundzwanzig</span>
-          <span id="t26">sechsundzwanzig</span>
-          <span id="t27">siebenundzwanzig</span>
-          <span id="t28">achtundzwanzig</span>
-          <span id="t29">neunundzwanzig</span>
-          <span id="t30">dreißig</span>
-          <span id="t31">einunddreißig</span>
-        </span>
-        <span id="monat">
-          <span id="m0">januar</span>
-          <span id="m1">februar</span>
-          <span id="m2">märz</span>
-          <span id="m3">april</span>
-          <span id="m4">mai</span>
-          <span id="m5">juni</span>
-          <span id="m6">juli</span>
-          <span id="m7">august</span>
-          <span id="m8">september</span>
-          <span id="m9">oktober</span>
-          <span id="m10">november</span>
-          <span id="m11">dezember</span>
-        </span>
-        <span id="stunde">            
-          <span id="h0">null</span>
-          <span id="h1">eins</span>
-          <span id="h2">zwei</span>
-          <span id="h3">drei</span>
-          <span id="h4">vier</span>
-          <span id="h5">fünf</span>
-          <span id="h6">sechs</span>
-          <span id="h7">sieben</span>
-          <span id="h8">acht</span>
-          <span id="h9">neun</span>
-          <span id="h10">zehn</span>
-          <span id="h11">elf</span>
-          <span id="h12">zwölf</span>
-          <span id="h13">dreizehn</span>
-          <span id="h14">vierzehn</span>
-          <span id="h15">fünfzehn</span>
-          <span id="h16">sechzehn</span>
-          <span id="h17">siebzehn</span>
-          <span id="h18">achtzehn</span>
-          <span id="h19">neunzehn</span>
-          <span id="h20">zwanzig</span>
-          <span id="h21">einundzwanzig</span>
-          <span id="h22">zweiundzwanzig</span>
-          <span id="h23">dreiundzwanzig</span>
-        </span>
-        <span id="minute">
-          <span id="0m">null</span>
-          <span id="1m">eins</span>
-          <span id="2m">zwei</span>
-          <span id="3m">drei</span>
-          <span id="4m">vier</span>
-          <span id="5m">fünf</span>
-          <span id="6m">sechs</span>
-          <span id="7m">sieben</span>
-          <span id="8m">acht</span>
-          <span id="9m">neun</span>
-          <span id="10m">zehn</span>
-          <span id="11m">elf</span>
-          <span id="12m">zwölf</span>
-          <span id="13m">dreizehn</span>
-          <span id="14m">vierzehn</span>
-          <span id="15m">fünfzehn</span>
-          <span id="16m">sechzehn</span>
-          <span id="17m">siebzehn</span>
-          <span id="18m">achtzehn</span>
-          <span id="19m">neunzehn</span>
-          <span id="20m">zwanzig</span>
-          <span id="21m">einundzwanzig</span>
-          <span id="22m">zweiundzwanzig</span>
-          <span id="23m">dreiundzwanzig</span>
-          <span id="24m">vierundzwanzig</span>
-          <span id="25m">fünfundzwanzig</span>
-          <span id="26m">sechsundzwanzig</span>
-          <span id="27m">siebenundzwanzig</span>
-          <span id="28m">achtundzwanzig</span>
-          <span id="29m">neunundzwanzig</span>
-          <span id="30m">dreißig</span>
-          <span id="31m">einunddreißig</span>
-          <span id="32m">zweiunddreißig</span>
-          <span id="33m">dreiunddreißig</span>
-          <span id="34m">vierunddreißig</span>
-          <span id="35m">fünfunddreißig</span>
-          <span id="36m">sechsunddreißig</span>
-          <span id="37m">siebenunddreißig</span>
-          <span id="38m">achtunddreißig</span>
-          <span id="39m">neununddreißig</span>
-          <span id="40m">vierzig</span>
-          <span id="41m">einundvierzig</span>
-          <span id="42m">zweiundvierzig</span>
-          <span id="43m">dreiundvierzig</span>
-          <span id="44m">vierundvierzig</span>
-          <span id="45m">fünfundvierzig</span>
-          <span id="46m">sechsundvierzig</span>
-          <span id="47m">siebenundvierzig</span>
-          <span id="48m">achtundvierzig</span>
-          <span id="49m">neunundvierzig</span>
-          <span id="50m">fünfzig</span>
-          <span id="51m">einundfünfzig</span>
-          <span id="52m">zweiundfünfzig</span>
-          <span id="53m">dreiundfünfzig</span>
-          <span id="54m">vierundfünfzig</span>
-          <span id="55m">fünfundfünfzig</span>
-          <span id="56m">sechsundfünfzig</span>
-          <span id="57m">siebenundfünfzig</span>
-          <span id="58m">achtundfünfzig</span>
-          <span id="59m">neunundfünfzig</span>
-        </span>
-        <span id="sekunde">
-          <span id="0s">null</span>
-          <span id="1s">eins</span>
-          <span id="2s">zwei</span>
-          <span id="3s">drei</span>
-          <span id="4s">vier</span>
-          <span id="5s">fünf</span>
-          <span id="6s">sechs</span>
-          <span id="7s">sieben</span>
-          <span id="8s">acht</span>
-          <span id="9s">neun</span>
-          <span id="10s">zehn</span>
-          <span id="11s">elf</span>
-          <span id="12s">zwölf</span>
-          <span id="13s">dreizehn</span>
-          <span id="14s">vierzehn</span>
-          <span id="15s">fünfzehn</span>
-          <span id="16s">sechzehn</span>
-          <span id="17s">siebzehn</span>
-          <span id="18s">achtzehn</span>
-          <span id="19s">neunzehn</span>
-          <span id="20s">zwanzig</span>
-          <span id="21s">einundzwanzig</span>
-          <span id="22s">zweiundzwanzig</span>
-          <span id="23s">dreiundzwanzig</span>
-          <span id="24s">vierundzwanzig</span>
-          <span id="25s">fünfundzwanzig</span>
-          <span id="26s">sechsundzwanzig</span>
-          <span id="27s">siebenundzwanzig</span>
-          <span id="28s">achtundzwanzig</span>
-          <span id="29s">neunundzwanzig</span>
-          <span id="30s">dreißig</span>
-          <span id="31s">einunddreißig</span>
-          <span id="32s">zweiunddreißig</span>
-          <span id="33s">dreiunddreißig</span>
-          <span id="34s">vierunddreißig</span>
-          <span id="35s">fünfunddreißig</span>
-          <span id="36s">sechsunddreißig</span>
-          <span id="37s">siebenunddreißig</span>
-          <span id="38s">achtunddreißig</span>
-          <span id="39s">neununddreißig</span>
-          <span id="40s">vierzig</span>
-          <span id="41s">einundvierzig</span>
-          <span id="42s">zweiundvierzig</span>
-          <span id="43s">dreiundvierzig</span>
-          <span id="44s">vierundvierzig</span>
-          <span id="45s">fünfundvierzig</span>
-          <span id="46s">sechsundvierzig</span>
-          <span id="47s">siebenundvierzig</span>
-          <span id="48s">achtundvierzig</span>
-          <span id="49s">neunundvierzig</span>
-          <span id="50s">fünfzig</span>
-          <span id="51s">einundfünfzig</span>
-          <span id="52s">zweiundfünfzig</span>
-          <span id="53s">dreiundfünfzig</span>
-          <span id="54s">vierundfünfzig</span>
-          <span id="55s">fünfundfünfzig</span>
-          <span id="56s">sechsundfünfzig</span>
-          <span id="57s">siebenundfünfzig</span>
-          <span id="58s">achtundfünfzig</span>
-          <span id="59s">neunundfünfzig</span>
-        </span>
-      </span>
+    <div id="container">
+      <div class="options">
+      <label for="cbwochentag" style="display: block;" onmouseover="highlight('wochentag');" onmouseout="highlight('wochentag');">Wochentag <input type="checkbox" id="cbwochentag" checked onclick="toggle_visibility('wochentag');" /></label>
+      <label for="cbtag" style="display: block;" onmouseover="highlight('tag');" onmouseout="highlight('tag');">Tag <input type="checkbox" id="cbtag" checked onclick="toggle_visibility('tag');" /></label>
+      <label for="cbmonat" style="display: block;" onmouseover="highlight('monat');" onmouseout="highlight('monat');">Monat <input type="checkbox" id="cbmonat" checked onclick="toggle_visibility('monat');" /></label>
+      <label for="cbstunde" style="display: block;" onmouseover="highlight('stunde');" onmouseout="highlight('stunde');">Stunde <input type="checkbox" id="cbstunde" checked onclick="toggle_visibility('stunde');" /></label>
+      <label for="cbminute" style="display: block;" onmouseover="highlight('minute');" onmouseout="highlight('minute');">Minute <input type="checkbox" id="cbminute" checked onclick="toggle_visibility('minute');" /></label>
+      <label for="cbsekunde" style="display: block;" onmouseover="highlight('sekunde');" onmouseout="highlight('sekunde');">Sekunde <input type="checkbox" id="cbsekunde" checked onclick="toggle_visibility('sekunde');" /></label>
+    </div>
+    <div id="uhr">
+      <div id="wochentag">
+        <span id="d1">montag</span> <span id="d2">dienstag</span> <span id="d3">mittwoch</span> <span id="d4">donnerstag</span> <span id="d5">freitag</span> <span id="d6">samstag</span> <span id="d0">sonntag</span>
+      </div>
+      <div id="tag">
+        <span id="t1">eins</span> <span id="t2">zwei</span> <span id="t3">drei</span> <span id="t4">vier</span> <span id="t5">fünf</span> <span id="t6">sechs</span> <span id="t7">sieben</span> <span id="t8">acht</span> <span id="t9">neun</span> <span id="t10">zehn</span> <span id="t11">elf</span> <span id="t12">zwölf</span> <span id="t13">dreizehn</span> <span id="t14">vierzehn</span> <span id="t15">fünfzehn</span> <span id="t16">sechzehn</span> <span id="t17">siebzehn</span> <span id="t18">achtzehn</span> <span id="t19">neunzehn</span> <span id="t20">zwanzig</span> <span id="t21">einundzwanzig</span> <span id="t22">zweiundzwanzig</span> <span id="t23">dreiundzwanzig</span> <span id="t24">vierundzwanzig</span> <span id="t25">fünfundzwanzig</span> <span id="t26">sechsundzwanzig</span> <span id="t27">siebenundzwanzig</span> <span id="t28">achtundzwanzig</span> <span id="t29">neunundzwanzig</span> <span id="t30">dreißig</span> <span id="t31">einunddreißig</span>
+      </div>
+      <div id="monat">
+        <span id="m0">januar</span> <span id="m1">februar</span> <span id="m2">märz</span> <span id="m3">april</span> <span id="m4">mai</span> <span id="m5">juni</span> <span id="m6">juli</span> <span id="m7">august</span> <span id="m8">september</span> <span id="m9">oktober</span> <span id="m10">november</span> <span id="m11">dezember</span>
+      </div>
+      <div id="stunde">
+        <span id="h0">null</span> <span id="h1">eins</span> <span id="h2">zwei</span> <span id="h3">drei</span> <span id="h4">vier</span> <span id="h5">fünf</span> <span id="h6">sechs</span> <span id="h7">sieben</span> <span id="h8">acht</span> <span id="h9">neun</span> <span id="h10">zehn</span> <span id="h11">elf</span> <span id="h12">zwölf</span> <span id="h13">dreizehn</span> <span id="h14">vierzehn</span> <span id="h15">fünfzehn</span> <span id="h16">sechzehn</span> <span id="h17">siebzehn</span> <span id="h18">achtzehn</span> <span id="h19">neunzehn</span> <span id="h20">zwanzig</span> <span id="h21">einundzwanzig</span> <span id="h22">zweiundzwanzig</span> <span id="h23">dreiundzwanzig</span>
+      </div>
+      <div id="minute">
+        <span id="0m">null</span> <span id="1m">eins</span> <span id="2m">zwei</span> <span id="3m">drei</span> <span id="4m">vier</span> <span id="5m">fünf</span> <span id="6m">sechs</span> <span id="7m">sieben</span> <span id="8m">acht</span> <span id="9m">neun</span> <span id="10m">zehn</span> <span id="11m">elf</span> <span id="12m">zwölf</span> <span id="13m">dreizehn</span> <span id="14m">vierzehn</span> <span id="15m">fünfzehn</span> <span id="16m">sechzehn</span> <span id="17m">siebzehn</span> <span id="18m">achtzehn</span> <span id="19m">neunzehn</span> <span id="20m">zwanzig</span> <span id="21m">einundzwanzig</span> <span id="22m">zweiundzwanzig</span> <span id="23m">dreiundzwanzig</span> <span id="24m">vierundzwanzig</span> <span id="25m">fünfundzwanzig</span> <span id="26m">sechsundzwanzig</span> <span id="27m">siebenundzwanzig</span> <span id="28m">achtundzwanzig</span> <span id="29m">neunundzwanzig</span> <span id="30m">dreißig</span> <span id="31m">einunddreißig</span> <span id="32m">zweiunddreißig</span> <span id="33m">dreiunddreißig</span> <span id="34m">vierunddreißig</span> <span id="35m">fünfunddreißig</span> <span id="36m">sechsunddreißig</span> <span id="37m">siebenunddreißig</span> <span id="38m">achtunddreißig</span> <span id="39m">neununddreißig</span> <span id="40m">vierzig</span> <span id="41m">einundvierzig</span> <span id="42m">zweiundvierzig</span> <span id="43m">dreiundvierzig</span> <span id="44m">vierundvierzig</span> <span id="45m">fünfundvierzig</span> <span id="46m">sechsundvierzig</span> <span id="47m">siebenundvierzig</span> <span id="48m">achtundvierzig</span> <span id="49m">neunundvierzig</span> <span id="50m">fünfzig</span> <span id="51m">einundfünfzig</span> <span id="52m">zweiundfünfzig</span> <span id="53m">dreiundfünfzig</span> <span id="54m">vierundfünfzig</span> <span id="55m">fünfundfünfzig</span> <span id="56m">sechsundfünfzig</span> <span id="57m">siebenundfünfzig</span> <span id="58m">achtundfünfzig</span> <span id="59m">neunundfünfzig</span>
+      </div>
+      <div id="sekunde">
+        <span id="0s">null</span> <span id="1s">eins</span> <span id="2s">zwei</span> <span id="3s">drei</span> <span id="4s">vier</span> <span id="5s">fünf</span> <span id="6s">sechs</span> <span id="7s">sieben</span> <span id="8s">acht</span> <span id="9s">neun</span> <span id="10s">zehn</span> <span id="11s">elf</span> <span id="12s">zwölf</span> <span id="13s">dreizehn</span> <span id="14s">vierzehn</span> <span id="15s">fünfzehn</span> <span id="16s">sechzehn</span> <span id="17s">siebzehn</span> <span id="18s">achtzehn</span> <span id="19s">neunzehn</span> <span id="20s">zwanzig</span> <span id="21s">einundzwanzig</span> <span id="22s">zweiundzwanzig</span> <span id="23s">dreiundzwanzig</span> <span id="24s">vierundzwanzig</span> <span id="25s">fünfundzwanzig</span> <span id="26s">sechsundzwanzig</span> <span id="27s">siebenundzwanzig</span> <span id="28s">achtundzwanzig</span> <span id="29s">neunundzwanzig</span> <span id="30s">dreißig</span> <span id="31s">einunddreißig</span> <span id="32s">zweiunddreißig</span> <span id="33s">dreiunddreißig</span> <span id="34s">vierunddreißig</span> <span id="35s">fünfunddreißig</span> <span id="36s">sechsunddreißig</span> <span id="37s">siebenunddreißig</span> <span id="38s">achtunddreißig</span> <span id="39s">neununddreißig</span> <span id="40s">vierzig</span> <span id="41s">einundvierzig</span> <span id="42s">zweiundvierzig</span> <span id="43s">dreiundvierzig</span> <span id="44s">vierundvierzig</span> <span id="45s">fünfundvierzig</span> <span id="46s">sechsundvierzig</span> <span id="47s">siebenundvierzig</span> <span id="48s">achtundvierzig</span> <span id="49s">neunundvierzig</span> <span id="50s">fünfzig</span> <span id="51s">einundfünfzig</span> <span id="52s">zweiundfünfzig</span> <span id="53s">dreiundfünfzig</span> <span id="54s">vierundfünfzig</span> <span id="55s">fünfundfünfzig</span> <span id="56s">sechsundfünfzig</span> <span id="57s">siebenundfünfzig</span> <span id="58s">achtundfünfzig</span> <span id="59s">neunundfünfzig</span>
+      </div>
     </div>
   </body>
 </html>
 
-<script src='js.js'></script> 
+<script src='js.js'></script>
