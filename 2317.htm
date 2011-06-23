@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<!--
+
+Hi there,
+the other night I had this idea....
+my first thought was, just text and a little colour?! I am able to do that..
+turns out it's not THAT easy for someone without any experience. But i got
+it working somehow. YEAY!
+
+If you like what you see - or are looking at the code and think of much
+nicer ways to get the clock ticking... please let me know
+
+http://github.com/z3e/2317
+
+~pk
+
+-->
+<html>
+  <head>
+    <title>2317</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="2317 in words" />
+    <link rel='stylesheet' type='text/css' href='style.css'/>
+    <link rel="shortcut icon" href="favicon.ico" id="favicon" type="image/png">
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/><![endif]-->
+  </head>
+  <body>
+    <div id="container">
+      <div class="options">
+        <label for="cbwochentag" style="display: block;" onmouseover="highlight('wochentag');" onmouseout="highlight('wochentag');">Wochentag <input type="checkbox" id="cbwochentag" checked onclick="toggle_visibility('wochentag');" /></label>
+        <label for="cbtag" style="display: block;" onmouseover="highlight('tag');" onmouseout="highlight('tag');">Tag <input type="checkbox" id="cbtag" checked onclick="toggle_visibility('tag');" /></label>
+        <label for="cbmonat" style="display: block;" onmouseover="highlight('monat');" onmouseout="highlight('monat');">Monat <input type="checkbox" id="cbmonat" checked onclick="toggle_visibility('monat');" /></label>
+        <label for="cbstunde" style="display: block;" onmouseover="highlight('stunde');" onmouseout="highlight('stunde');">Stunde <input type="checkbox" id="cbstunde" checked onclick="toggle_visibility('stunde');" /></label>
+        <label for="cbminute" style="display: block;" onmouseover="highlight('minute');" onmouseout="highlight('minute');">Minute <input type="checkbox" id="cbminute" checked onclick="toggle_visibility('minute');" /></label>
+        <label for="cbsekunde" style="display: block;" onmouseover="highlight('sekunde');" onmouseout="highlight('sekunde');">Sekunde <input type="checkbox" id="cbsekunde" checked onclick="toggle_visibility('sekunde');" /></label>
+      </div>
+      <div id="uhr">
+		  <div id="wochentag">
+			<span id="d1">montag</span> <span id="d2">dienstag</span> <span id="d3">mittwoch</span> <span id="d4">donnerstag</span> <span id="d5">freitag</span> <span id="d6">samstag</span> <span id="d0">sonntag</span>
+		  </div>
+		  <div id="tag">
+			<span id="t1">eins</span> <span id="t2">zwei</span> <span id="t3">drei</span> <span id="t4">vier</span> <span id="t5">fünf</span> <span id="t6">sechs</span> <span id="t7">sieben</span> <span id="t8">acht</span> <span id="t9">neun</span> <span id="t10">zehn</span> <span id="t11">elf</span> <span id="t12">zwölf</span> <span id="t13">dreizehn</span> <span id="t14">vierzehn</span> <span id="t15">fünfzehn</span> <span id="t16">sechzehn</span> <span id="t17">siebzehn</span> <span id="t18">achtzehn</span> <span id="t19">neunzehn</span> <span id="t20">zwanzig</span> <span id="t21">einundzwanzig</span> <span id="t22">zweiundzwanzig</span> <span id="t23">dreiundzwanzig</span> <span id="t24">vierundzwanzig</span> <span id="t25">fünfundzwanzig</span> <span id="t26">sechsundzwanzig</span> <span id="t27">siebenundzwanzig</span> <span id="t28">achtundzwanzig</span> <span id="t29">neunundzwanzig</span> <span id="t30">dreißig</span> <span id="t31">einunddreißig</span>
+		  </div>
+		  <div id="monat">
+			<span id="mo0">januar</span> <span id="mo1">februar</span> <span id="mo2">märz</span> <span id="mo3">april</span> <span id="mo4">mai</span> <span id="mo5">juni</span> <span id="mo6">juli</span> <span id="mo7">august</span> <span id="mo8">september</span> <span id="mo9">oktober</span> <span id="mo10">november</span> <span id="mo11">dezember</span>
+		  </div>
+		  <div id="stunde">
+			<span id="h0">null</span> <span id="h1">eins</span> <span id="h2">zwei</span> <span id="h3">drei</span> <span id="h4">vier</span> <span id="h5">fünf</span> <span id="h6">sechs</span> <span id="h7">sieben</span> <span id="h8">acht</span> <span id="h9">neun</span> <span id="h10">zehn</span> <span id="h11">elf</span> <span id="h12">zwölf</span> <span id="h13">dreizehn</span> <span id="h14">vierzehn</span> <span id="h15">fünfzehn</span> <span id="h16">sechzehn</span> <span id="h17">siebzehn</span> <span id="h18">achtzehn</span> <span id="h19">neunzehn</span> <span id="h20">zwanzig</span> <span id="h21">einundzwanzig</span> <span id="h22">zweiundzwanzig</span> <span id="h23">dreiundzwanzig</span>
+		  </div>
+		  <div id="minute">
+			<span id="mi0">null</span> <span id="mi1">eins</span> <span id="mi2">zwei</span> <span id="mi3">drei</span> <span id="mi4">vier</span> <span id="mi5">fünf</span> <span id="mi6">sechs</span> <span id="mi7">sieben</span> <span id="mi8">acht</span> <span id="mi9">neun</span> <span id="mi10">zehn</span> <span id="mi11">elf</span> <span id="mi12">zwölf</span> <span id="mi13">dreizehn</span> <span id="mi14">vierzehn</span> <span id="mi15">fünfzehn</span> <span id="mi16">sechzehn</span> <span id="mi17">siebzehn</span> <span id="mi18">achtzehn</span> <span id="mi19">neunzehn</span> <span id="mi20">zwanzig</span> <span id="mi21">einundzwanzig</span> <span id="mi22">zweiundzwanzig</span> <span id="mi23">dreiundzwanzig</span> <span id="mi24">vierundzwanzig</span> <span id="mi25">fünfundzwanzig</span> <span id="mi26">sechsundzwanzig</span> <span id="mi27">siebenundzwanzig</span> <span id="mi28">achtundzwanzig</span> <span id="mi29">neunundzwanzig</span> <span id="mi30">dreißig</span> <span id="mi31">einunddreißig</span> <span id="mi32">zweiunddreißig</span> <span id="mi33">dreiunddreißig</span> <span id="mi34">vierunddreißig</span> <span id="mi35">fünfunddreißig</span> <span id="mi36">sechsunddreißig</span> <span id="mi37">siebenunddreißig</span> <span id="mi38">achtunddreißig</span> <span id="mi39">neununddreißig</span> <span id="mi40">vierzig</span> <span id="mi41">einundvierzig</span> <span id="mi42">zweiundvierzig</span> <span id="mi43">dreiundvierzig</span> <span id="mi44">vierundvierzig</span> <span id="mi45">fünfundvierzig</span> <span id="mi46">sechsundvierzig</span> <span id="mi47">siebenundvierzig</span> <span id="mi48">achtundvierzig</span> <span id="mi49">neunundvierzig</span> <span id="mi50">fünfzig</span> <span id="mi51">einundfünfzig</span> <span id="mi52">zweiundfünfzig</span> <span id="mi53">dreiundfünfzig</span> <span id="mi54">vierundfünfzig</span> <span id="mi55">fünfundfünfzig</span> <span id="mi56">sechsundfünfzig</span> <span id="mi57">siebenundfünfzig</span> <span id="mi58">achtundfünfzig</span> <span id="mi59">neunundfünfzig</span>
+		  </div>
+		  <div id="sekunde">
+			<span id="s0">null</span> <span id="s1">eins</span> <span id="s2">zwei</span> <span id="s3">drei</span> <span id="s4">vier</span> <span id="s5">fünf</span> <span id="s6">sechs</span> <span id="s7">sieben</span> <span id="s8">acht</span> <span id="s9">neun</span> <span id="s10">zehn</span> <span id="s11">elf</span> <span id="s12">zwölf</span> <span id="s13">dreizehn</span> <span id="s14">vierzehn</span> <span id="s15">fünfzehn</span> <span id="s16">sechzehn</span> <span id="s17">siebzehn</span> <span id="s18">achtzehn</span> <span id="s19">neunzehn</span> <span id="s20">zwanzig</span> <span id="s21">einundzwanzig</span> <span id="s22">zweiundzwanzig</span> <span id="s23">dreiundzwanzig</span> <span id="s24">vierundzwanzig</span> <span id="s25">fünfundzwanzig</span> <span id="s26">sechsundzwanzig</span> <span id="s27">siebenundzwanzig</span> <span id="s28">achtundzwanzig</span> <span id="s29">neunundzwanzig</span> <span id="s30">dreißig</span> <span id="s31">einunddreißig</span> <span id="s32">zweiunddreißig</span> <span id="s33">dreiunddreißig</span> <span id="s34">vierunddreißig</span> <span id="s35">fünfunddreißig</span> <span id="s36">sechsunddreißig</span> <span id="s37">siebenunddreißig</span> <span id="s38">achtunddreißig</span> <span id="s39">neununddreißig</span> <span id="s40">vierzig</span> <span id="s41">einundvierzig</span> <span id="s42">zweiundvierzig</span> <span id="s43">dreiundvierzig</span> <span id="s44">vierundvierzig</span> <span id="s45">fünfundvierzig</span> <span id="s46">sechsundvierzig</span> <span id="s47">siebenundvierzig</span> <span id="s48">achtundvierzig</span> <span id="s49">neunundvierzig</span> <span id="s50">fünfzig</span> <span id="s51">einundfünfzig</span> <span id="s52">zweiundfünfzig</span> <span id="s53">dreiundfünfzig</span> <span id="s54">vierundfünfzig</span> <span id="s55">fünfundfünfzig</span> <span id="s56">sechsundfünfzig</span> <span id="s57">siebenundfünfzig</span> <span id="s58">achtundfünfzig</span> <span id="s59">neunundfünfzig</span>
+		  </div>
+      </div>
+    </div>
+	<script src='js.js'></script>	
+  </body>
+</html>
